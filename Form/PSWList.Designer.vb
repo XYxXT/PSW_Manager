@@ -23,9 +23,6 @@ Partial Class PSWList
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PSWList))
-        Me.Root_Btn = New System.Windows.Forms.Button()
-        Me.Add_Btn = New System.Windows.Forms.Button()
-        Me.Synchronized_Btn = New System.Windows.Forms.Button()
         Me.Search_Tbx = New System.Windows.Forms.TextBox()
         Me.Psw_Dgv = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -33,50 +30,22 @@ Partial Class PSWList
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Upload_Btn = New System.Windows.Forms.Button()
+        Me.Download_Btn = New System.Windows.Forms.Button()
+        Me.Add_Btn = New System.Windows.Forms.Button()
+        Me.Root_Btn = New System.Windows.Forms.Button()
         CType(Me.Psw_Dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Root_Btn
-        '
-        Me.Root_Btn.BackgroundImage = Global.PSW_Manager.My.Resources.Resources.root
-        Me.Root_Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Root_Btn.Location = New System.Drawing.Point(12, 12)
-        Me.Root_Btn.Name = "Root_Btn"
-        Me.Root_Btn.Size = New System.Drawing.Size(60, 60)
-        Me.Root_Btn.TabIndex = 0
-        Me.Root_Btn.UseVisualStyleBackColor = True
-        '
-        'Add_Btn
-        '
-        Me.Add_Btn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Add_Btn.BackgroundImage = Global.PSW_Manager.My.Resources.Resources.add
-        Me.Add_Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Add_Btn.Location = New System.Drawing.Point(658, 12)
-        Me.Add_Btn.Name = "Add_Btn"
-        Me.Add_Btn.Size = New System.Drawing.Size(60, 60)
-        Me.Add_Btn.TabIndex = 1
-        Me.Add_Btn.UseVisualStyleBackColor = True
-        '
-        'Synchronized_Btn
-        '
-        Me.Synchronized_Btn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Synchronized_Btn.BackgroundImage = Global.PSW_Manager.My.Resources.Resources.synchronized
-        Me.Synchronized_Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Synchronized_Btn.Location = New System.Drawing.Point(592, 12)
-        Me.Synchronized_Btn.Name = "Synchronized_Btn"
-        Me.Synchronized_Btn.Size = New System.Drawing.Size(60, 60)
-        Me.Synchronized_Btn.TabIndex = 2
-        Me.Synchronized_Btn.UseVisualStyleBackColor = True
         '
         'Search_Tbx
         '
         Me.Search_Tbx.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Search_Tbx.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Search_Tbx.Location = New System.Drawing.Point(12, 78)
+        Me.Search_Tbx.Font = New System.Drawing.Font("Microsoft Sans Serif", 28.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Search_Tbx.Location = New System.Drawing.Point(12, 77)
         Me.Search_Tbx.Multiline = True
         Me.Search_Tbx.Name = "Search_Tbx"
-        Me.Search_Tbx.Size = New System.Drawing.Size(706, 60)
+        Me.Search_Tbx.Size = New System.Drawing.Size(709, 61)
         Me.Search_Tbx.TabIndex = 3
         '
         'Psw_Dgv
@@ -97,7 +66,7 @@ Partial Class PSWList
         Me.Psw_Dgv.RowHeadersWidth = 51
         Me.Psw_Dgv.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.Psw_Dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.Psw_Dgv.Size = New System.Drawing.Size(706, 553)
+        Me.Psw_Dgv.Size = New System.Drawing.Size(708, 553)
         Me.Psw_Dgv.TabIndex = 5
         '
         'Column1
@@ -151,14 +120,58 @@ Partial Class PSWList
         Me.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.Column4.Width = 210
         '
+        'Upload_Btn
+        '
+        Me.Upload_Btn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Upload_Btn.BackgroundImage = Global.PSW_Manager.My.Resources.Resources.upload
+        Me.Upload_Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Upload_Btn.Location = New System.Drawing.Point(78, 11)
+        Me.Upload_Btn.Name = "Upload_Btn"
+        Me.Upload_Btn.Size = New System.Drawing.Size(60, 60)
+        Me.Upload_Btn.TabIndex = 6
+        Me.Upload_Btn.UseVisualStyleBackColor = True
+        '
+        'Download_Btn
+        '
+        Me.Download_Btn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Download_Btn.BackgroundImage = Global.PSW_Manager.My.Resources.Resources.download
+        Me.Download_Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Download_Btn.Location = New System.Drawing.Point(144, 11)
+        Me.Download_Btn.Name = "Download_Btn"
+        Me.Download_Btn.Size = New System.Drawing.Size(60, 60)
+        Me.Download_Btn.TabIndex = 2
+        Me.Download_Btn.UseVisualStyleBackColor = True
+        '
+        'Add_Btn
+        '
+        Me.Add_Btn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Add_Btn.BackgroundImage = Global.PSW_Manager.My.Resources.Resources.add
+        Me.Add_Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Add_Btn.Location = New System.Drawing.Point(660, 11)
+        Me.Add_Btn.Name = "Add_Btn"
+        Me.Add_Btn.Size = New System.Drawing.Size(60, 60)
+        Me.Add_Btn.TabIndex = 1
+        Me.Add_Btn.UseVisualStyleBackColor = True
+        '
+        'Root_Btn
+        '
+        Me.Root_Btn.BackgroundImage = Global.PSW_Manager.My.Resources.Resources.root
+        Me.Root_Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Root_Btn.Location = New System.Drawing.Point(12, 11)
+        Me.Root_Btn.Name = "Root_Btn"
+        Me.Root_Btn.Size = New System.Drawing.Size(60, 60)
+        Me.Root_Btn.TabIndex = 0
+        Me.Root_Btn.UseVisualStyleBackColor = True
+        '
         'PSWList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(730, 707)
+        Me.ClientSize = New System.Drawing.Size(730, 683)
+        Me.Controls.Add(Me.Upload_Btn)
         Me.Controls.Add(Me.Psw_Dgv)
         Me.Controls.Add(Me.Search_Tbx)
-        Me.Controls.Add(Me.Synchronized_Btn)
+        Me.Controls.Add(Me.Download_Btn)
         Me.Controls.Add(Me.Add_Btn)
         Me.Controls.Add(Me.Root_Btn)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
@@ -167,7 +180,7 @@ Partial Class PSWList
         Me.MinimizeBox = False
         Me.Name = "PSWList"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "PSW List"
+        Me.Text = "PSW LIST"
         CType(Me.Psw_Dgv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -176,7 +189,7 @@ Partial Class PSWList
 
     Friend WithEvents Root_Btn As Button
     Friend WithEvents Add_Btn As Button
-    Friend WithEvents Synchronized_Btn As Button
+    Friend WithEvents Download_Btn As Button
     Friend WithEvents Search_Tbx As TextBox
     Friend WithEvents Psw_Dgv As DataGridView
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
@@ -184,4 +197,5 @@ Partial Class PSWList
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Upload_Btn As Button
 End Class

@@ -130,6 +130,9 @@
     <EmbeddedResource Include="Form\PSWList.resx">
       <DependentUpon>PSWList.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\Root.resx">
+      <DependentUpon>Root.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -153,6 +156,8 @@
   <ItemGroup>
     <Content Include="Resource\Image\add.png" />
     <Content Include="Resource\Image\delete.png" />
+    <None Include="Resource\Image\upload.png" />
+    <None Include="Resource\Image\download.jpg" />
     <Content Include="Resource\Image\padlock.ico" />
     <Content Include="Resource\Image\padlock.png" />
     <Content Include="Resource\Image\root.png" />

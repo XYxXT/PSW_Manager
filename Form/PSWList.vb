@@ -27,13 +27,16 @@
 #End Region
 #Region "CONTROL"
 #Region "   BUTTON"
-    Private Sub Root_Btn_Click(sender As Button, e As EventArgs) Handles Root_Btn.Click
+    Private Sub Root_Btn_Click(sender As Object, e As EventArgs) Handles Root_Btn.Click
         Root.ShowDialog()
     End Sub
-    Private Sub Synchronized_Btn_Click(sender As Button, e As EventArgs) Handles Synchronized_Btn.Click
-        UpdateData()
+    Private Sub Download_Btn_Click(sender As Object, e As EventArgs) Handles Download_Btn.Click
+
     End Sub
-    Private Sub Add_Btn_Click(sender As Button, e As EventArgs) Handles Add_Btn.Click
+    Private Sub Upload_Btn_Click(sender As Object, e As EventArgs) Handles Upload_Btn.Click
+
+    End Sub
+    Private Sub Add_Btn_Click(sender As Object, e As EventArgs) Handles Add_Btn.Click
         PswSelected = Nothing
         PSWInfo.ShowDialog()
     End Sub
