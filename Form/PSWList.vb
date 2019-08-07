@@ -6,7 +6,7 @@
     Private Sub PSWList_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         StartConfig()
         InitForm()
-        UpdateData()
+        LoadData()
     End Sub
 #End Region
 
@@ -14,7 +14,7 @@
     Private Sub InitForm()
         lastText = ""
     End Sub
-    Private Sub UpdateData()
+    Private Sub LoadData()
         Dim whereCommand As String = " site LIKE '%" & Search_Tbx.Text &
                 "%' OR description LIKE '%" & Search_Tbx.Text &
                  "%' OR user LIKE '%" & Search_Tbx.Text & "%' "
@@ -30,22 +30,17 @@
     Private Sub Root_Btn_Click(sender As Object, e As EventArgs) Handles Root_Btn.Click
         Root.ShowDialog()
     End Sub
-    Private Sub Download_Btn_Click(sender As Object, e As EventArgs) Handles Download_Btn.Click
-
-    End Sub
-    Private Sub Upload_Btn_Click(sender As Object, e As EventArgs) Handles Upload_Btn.Click
-
-    End Sub
     Private Sub Add_Btn_Click(sender As Object, e As EventArgs) Handles Add_Btn.Click
         PswSelected = Nothing
         PSWInfo.ShowDialog()
+        LoadData()
     End Sub
 #End Region
 #Region "   TEXT BOX"
     Private Sub Search_Tbx_TextChanged(sender As TextBox, e As EventArgs) Handles Search_Tbx.TextChanged
         If sender.Text <> lastText Then
             lastText = sender.Text
-            UpdateData()
+            LoadData()
         End If
     End Sub
 #End Region
@@ -53,6 +48,7 @@
     Private Sub Psw_Dgv_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles Psw_Dgv.CellContentDoubleClick
         PswSelected = Psw_Dgv.Rows(e.RowIndex).Cells(0).Value
         PSWInfo.ShowDialog()
+        LoadData()
     End Sub
 #End Region
 #End Region

@@ -30,8 +30,6 @@ Partial Class PSWList
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Upload_Btn = New System.Windows.Forms.Button()
-        Me.Download_Btn = New System.Windows.Forms.Button()
         Me.Add_Btn = New System.Windows.Forms.Button()
         Me.Root_Btn = New System.Windows.Forms.Button()
         CType(Me.Psw_Dgv, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -120,28 +118,6 @@ Partial Class PSWList
         Me.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.Column4.Width = 210
         '
-        'Upload_Btn
-        '
-        Me.Upload_Btn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Upload_Btn.BackgroundImage = Global.PSW_Manager.My.Resources.Resources.upload
-        Me.Upload_Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Upload_Btn.Location = New System.Drawing.Point(78, 11)
-        Me.Upload_Btn.Name = "Upload_Btn"
-        Me.Upload_Btn.Size = New System.Drawing.Size(60, 60)
-        Me.Upload_Btn.TabIndex = 6
-        Me.Upload_Btn.UseVisualStyleBackColor = True
-        '
-        'Download_Btn
-        '
-        Me.Download_Btn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Download_Btn.BackgroundImage = Global.PSW_Manager.My.Resources.Resources.download
-        Me.Download_Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Download_Btn.Location = New System.Drawing.Point(144, 11)
-        Me.Download_Btn.Name = "Download_Btn"
-        Me.Download_Btn.Size = New System.Drawing.Size(60, 60)
-        Me.Download_Btn.TabIndex = 2
-        Me.Download_Btn.UseVisualStyleBackColor = True
-        '
         'Add_Btn
         '
         Me.Add_Btn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -168,10 +144,8 @@ Partial Class PSWList
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(730, 683)
-        Me.Controls.Add(Me.Upload_Btn)
         Me.Controls.Add(Me.Psw_Dgv)
         Me.Controls.Add(Me.Search_Tbx)
-        Me.Controls.Add(Me.Download_Btn)
         Me.Controls.Add(Me.Add_Btn)
         Me.Controls.Add(Me.Root_Btn)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
@@ -189,7 +163,6 @@ Partial Class PSWList
 
     Friend WithEvents Root_Btn As Button
     Friend WithEvents Add_Btn As Button
-    Friend WithEvents Download_Btn As Button
     Friend WithEvents Search_Tbx As TextBox
     Friend WithEvents Psw_Dgv As DataGridView
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
@@ -197,5 +170,4 @@ Partial Class PSWList
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
-    Friend WithEvents Upload_Btn As Button
 End Class

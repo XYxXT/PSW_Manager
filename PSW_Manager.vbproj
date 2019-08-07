@@ -119,6 +119,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="AppConfig\Start.vb" />
+    <Compile Include="Util\U_DataGridView.vb" />
     <Compile Include="Util\U_SqlFormat.vb" />
     <Compile Include="Util\U_Sqlite.vb" />
     <Compile Include="Util\U_System.vb" />
