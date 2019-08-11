@@ -1,10 +1,12 @@
-﻿Public Class PSWList
+﻿Imports System.Data.SQLite
+Imports System.IO
+
+Public Class PSWList
 #Region "VARIABLE"
     Private lastText As String
 #End Region
 #Region "FORM"
     Private Sub PSWList_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        StartConfig()
         InitForm()
         LoadData()
     End Sub
@@ -15,11 +17,10 @@
         lastText = ""
     End Sub
     Private Sub LoadData()
-        Dim whereCommand As String = " site LIKE '%" & Search_Tbx.Text &
+        Dim whereCommand As String = "( site LIKE '%" & Search_Tbx.Text &
                 "%' OR description LIKE '%" & Search_Tbx.Text &
-                 "%' OR user LIKE '%" & Search_Tbx.Text & "%' "
-        Dim selectCommand As String = "SELECT id, site, user, user_name, user_psw FROM password WHERE (root = 0 OR root = " & ToSql_BoolToBit(IsRoot) & ") AND " & whereCommand
-
+                 "%' OR user LIKE '%" & Search_Tbx.Text & "%' )"
+        Dim selectCommand As String = "SELECT id_password, site, user, user_name, user_psw FROM password WHERE (root = 0 OR root = " & ToSql_BoolToBit(IsRoot) & ") AND " & whereCommand
         SqliteOpen()
         SqliteDbDgv(Psw_Dgv, selectCommand)
         SqliteClose()

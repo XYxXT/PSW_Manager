@@ -40,10 +40,11 @@ Partial Class PSWList
         Me.Search_Tbx.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Search_Tbx.Font = New System.Drawing.Font("Microsoft Sans Serif", 28.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Search_Tbx.Location = New System.Drawing.Point(12, 77)
+        Me.Search_Tbx.Location = New System.Drawing.Point(16, 95)
+        Me.Search_Tbx.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Search_Tbx.Multiline = True
         Me.Search_Tbx.Name = "Search_Tbx"
-        Me.Search_Tbx.Size = New System.Drawing.Size(709, 61)
+        Me.Search_Tbx.Size = New System.Drawing.Size(944, 74)
         Me.Search_Tbx.TabIndex = 3
         '
         'Psw_Dgv
@@ -57,14 +58,15 @@ Partial Class PSWList
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Psw_Dgv.ColumnHeadersHeight = 29
         Me.Psw_Dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column5, Me.Column3, Me.Column4})
-        Me.Psw_Dgv.Location = New System.Drawing.Point(12, 144)
+        Me.Psw_Dgv.Location = New System.Drawing.Point(16, 177)
+        Me.Psw_Dgv.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Psw_Dgv.MultiSelect = False
         Me.Psw_Dgv.Name = "Psw_Dgv"
         Me.Psw_Dgv.RowHeadersVisible = False
         Me.Psw_Dgv.RowHeadersWidth = 51
         Me.Psw_Dgv.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.Psw_Dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.Psw_Dgv.Size = New System.Drawing.Size(708, 553)
+        Me.Psw_Dgv.Size = New System.Drawing.Size(944, 681)
         Me.Psw_Dgv.TabIndex = 5
         '
         'Column1
@@ -123,9 +125,10 @@ Partial Class PSWList
         Me.Add_Btn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Add_Btn.BackgroundImage = Global.PSW_Manager.My.Resources.Resources.add
         Me.Add_Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Add_Btn.Location = New System.Drawing.Point(660, 11)
+        Me.Add_Btn.Location = New System.Drawing.Point(880, 14)
+        Me.Add_Btn.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Add_Btn.Name = "Add_Btn"
-        Me.Add_Btn.Size = New System.Drawing.Size(60, 60)
+        Me.Add_Btn.Size = New System.Drawing.Size(80, 74)
         Me.Add_Btn.TabIndex = 1
         Me.Add_Btn.UseVisualStyleBackColor = True
         '
@@ -133,23 +136,26 @@ Partial Class PSWList
         '
         Me.Root_Btn.BackgroundImage = Global.PSW_Manager.My.Resources.Resources.root
         Me.Root_Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Root_Btn.Location = New System.Drawing.Point(12, 11)
+        Me.Root_Btn.Location = New System.Drawing.Point(16, 14)
+        Me.Root_Btn.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Root_Btn.Name = "Root_Btn"
-        Me.Root_Btn.Size = New System.Drawing.Size(60, 60)
+        Me.Root_Btn.Size = New System.Drawing.Size(80, 74)
         Me.Root_Btn.TabIndex = 0
         Me.Root_Btn.UseVisualStyleBackColor = True
+        Me.Root_Btn.Visible = False
         '
         'PSWList
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(730, 683)
+        Me.ClientSize = New System.Drawing.Size(973, 841)
         Me.Controls.Add(Me.Psw_Dgv)
         Me.Controls.Add(Me.Search_Tbx)
         Me.Controls.Add(Me.Add_Btn)
         Me.Controls.Add(Me.Root_Btn)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "PSWList"

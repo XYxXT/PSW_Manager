@@ -55,7 +55,7 @@ Partial Class PSWInfo
         Me.Save_Btn.BackgroundImage = Global.PSW_Manager.My.Resources.Resources.padlock
         Me.Save_Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Save_Btn.Location = New System.Drawing.Point(971, 15)
-        Me.Save_Btn.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Save_Btn.Margin = New System.Windows.Forms.Padding(4)
         Me.Save_Btn.Name = "Save_Btn"
         Me.Save_Btn.Size = New System.Drawing.Size(80, 74)
         Me.Save_Btn.TabIndex = 3
@@ -67,7 +67,7 @@ Partial Class PSWInfo
         Me.Add_Btn.BackgroundImage = Global.PSW_Manager.My.Resources.Resources.add
         Me.Add_Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Add_Btn.Location = New System.Drawing.Point(971, 273)
-        Me.Add_Btn.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Add_Btn.Margin = New System.Windows.Forms.Padding(4)
         Me.Add_Btn.Name = "Add_Btn"
         Me.Add_Btn.Size = New System.Drawing.Size(80, 74)
         Me.Add_Btn.TabIndex = 5
@@ -79,7 +79,7 @@ Partial Class PSWInfo
         Me.Delete_Btn.BackgroundImage = Global.PSW_Manager.My.Resources.Resources.delete
         Me.Delete_Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Delete_Btn.Location = New System.Drawing.Point(971, 354)
-        Me.Delete_Btn.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Delete_Btn.Margin = New System.Windows.Forms.Padding(4)
         Me.Delete_Btn.Name = "Delete_Btn"
         Me.Delete_Btn.Size = New System.Drawing.Size(80, 74)
         Me.Delete_Btn.TabIndex = 6
@@ -95,7 +95,7 @@ Partial Class PSWInfo
         Me.ExtInfo_Dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ExtInfo_Dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5})
         Me.ExtInfo_Dgv.Location = New System.Drawing.Point(16, 273)
-        Me.ExtInfo_Dgv.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ExtInfo_Dgv.Margin = New System.Windows.Forms.Padding(4)
         Me.ExtInfo_Dgv.Name = "ExtInfo_Dgv"
         Me.ExtInfo_Dgv.RowHeadersVisible = False
         Me.ExtInfo_Dgv.RowHeadersWidth = 51
@@ -160,7 +160,7 @@ Partial Class PSWInfo
         '
         Me.Site_Tbx.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Site_Tbx.Location = New System.Drawing.Point(241, 15)
-        Me.Site_Tbx.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Site_Tbx.Margin = New System.Windows.Forms.Padding(4)
         Me.Site_Tbx.Name = "Site_Tbx"
         Me.Site_Tbx.Size = New System.Drawing.Size(212, 34)
         Me.Site_Tbx.TabIndex = 9
@@ -169,7 +169,7 @@ Partial Class PSWInfo
         '
         Me.WebSite_Tbx.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.WebSite_Tbx.Location = New System.Drawing.Point(241, 58)
-        Me.WebSite_Tbx.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.WebSite_Tbx.Margin = New System.Windows.Forms.Padding(4)
         Me.WebSite_Tbx.Name = "WebSite_Tbx"
         Me.WebSite_Tbx.Size = New System.Drawing.Size(212, 34)
         Me.WebSite_Tbx.TabIndex = 11
@@ -189,7 +189,7 @@ Partial Class PSWInfo
         '
         Me.User_Tbx.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.User_Tbx.Location = New System.Drawing.Point(241, 101)
-        Me.User_Tbx.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.User_Tbx.Margin = New System.Windows.Forms.Padding(4)
         Me.User_Tbx.Name = "User_Tbx"
         Me.User_Tbx.Size = New System.Drawing.Size(212, 34)
         Me.User_Tbx.TabIndex = 13
@@ -209,7 +209,7 @@ Partial Class PSWInfo
         '
         Me.UserName_Tbx.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UserName_Tbx.Location = New System.Drawing.Point(241, 144)
-        Me.UserName_Tbx.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.UserName_Tbx.Margin = New System.Windows.Forms.Padding(4)
         Me.UserName_Tbx.Name = "UserName_Tbx"
         Me.UserName_Tbx.Size = New System.Drawing.Size(212, 34)
         Me.UserName_Tbx.TabIndex = 15
@@ -229,7 +229,7 @@ Partial Class PSWInfo
         '
         Me.UserPSW_Tbx.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UserPSW_Tbx.Location = New System.Drawing.Point(241, 187)
-        Me.UserPSW_Tbx.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.UserPSW_Tbx.Margin = New System.Windows.Forms.Padding(4)
         Me.UserPSW_Tbx.Name = "UserPSW_Tbx"
         Me.UserPSW_Tbx.Size = New System.Drawing.Size(212, 34)
         Me.UserPSW_Tbx.TabIndex = 17
@@ -260,7 +260,7 @@ Partial Class PSWInfo
         '
         Me.Root_Cbx.AutoSize = True
         Me.Root_Cbx.Location = New System.Drawing.Point(332, 242)
-        Me.Root_Cbx.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Root_Cbx.Margin = New System.Windows.Forms.Padding(4)
         Me.Root_Cbx.Name = "Root_Cbx"
         Me.Root_Cbx.Size = New System.Drawing.Size(18, 17)
         Me.Root_Cbx.TabIndex = 19
@@ -281,7 +281,7 @@ Partial Class PSWInfo
         '
         Me.Description_Tbx.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Description_Tbx.Location = New System.Drawing.Point(508, 58)
-        Me.Description_Tbx.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Description_Tbx.Margin = New System.Windows.Forms.Padding(4)
         Me.Description_Tbx.Multiline = True
         Me.Description_Tbx.Name = "Description_Tbx"
         Me.Description_Tbx.Size = New System.Drawing.Size(453, 201)
@@ -312,7 +312,7 @@ Partial Class PSWInfo
         Me.Controls.Add(Me.Save_Btn)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "PSWInfo"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "PSW DETAIL"

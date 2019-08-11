@@ -1,6 +1,6 @@
 ﻿Public Class PSWInfo
 #Region "VARIABLE"
-    Dim id_password As Integer
+    Dim id_password As Long
     Dim dt As DataTable
     Dim columnsName() As String, columnsType() As String
 #End Region
@@ -10,7 +10,6 @@
         LoadData()
     End Sub
 #End Region
-
 #Region "DATA"
     Private Sub InitForm()
         id_password = PswSelected
@@ -31,8 +30,8 @@
         End If
     End Sub
     Private Sub LoadPSWInfo()
-        Dim selectQuery As String = "SELECT id, site, web_site, description, date_create, date_last_edit, user," +
-                " user_name, user_psw, root FROM password WHERE id = " & id_password
+        Dim selectQuery As String = "SELECT id, id_password, site, web_site, description, date_create, date_last_edit, user," +
+                " user_name, user_psw, root FROM password WHERE id_password = " & id_password
         SqliteOpen()
         SqliteDbDt(dt, selectQuery)
         SqliteClose()
@@ -67,13 +66,14 @@
         End If
     End Sub
     Private Sub SaveNew()
+        id_password = Format(Now, "yyyyMMddHHmmss")
+        PswSelected = id_password
         Dim insertCommand As String = "INSERT INTO password ( site, web_site, description, date_create, date_last_edit," +
-                " user, user_name, user_psw, root) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}','{7}', {8})"
+                " user, user_name, user_psw, root, id_password) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}','{7}', {8}, {9})"
         SqliteOpen()
         SqliteExecute(String.Format(insertCommand, Site_Tbx.Text, WebSite_Tbx.Text,
                 Description_Tbx.Text, Format(Now, "yyyy-MM-dd HH:mm"), Format(Now, "yyyy-MM-dd HH:mm"),
-                User_Tbx.Text, UserName_Tbx.Text, UserPSW_Tbx.Text, Root_Cbx.Checked))
-        PswSelected = SqliteLastID("password")
+                User_Tbx.Text, UserName_Tbx.Text, UserPSW_Tbx.Text, Root_Cbx.Checked, id_password))
         SqliteClose()
         SaveNewLastPSW(DateTime.Now.ToString("yyyy-MM-dd HH:mm"), UserName_Tbx.Text, UserPSW_Tbx.Text)
 

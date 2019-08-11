@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SQLite
 
 Module U_Sqlite
-    Public ConnectionString As String = "Data Source={0};Version=3;"
+    Public ConnectionString As String = "Data Source={0};Version=3;Pooling=True;Synchronous=Off;journal mode=Memory;"
     Public ConnectionFile As String
     Public SqliteConn As SQLiteConnection
     Public SqliteCommand As SQLiteCommand
@@ -21,6 +21,8 @@ Module U_Sqlite
     Public Sub SqliteClose()
         SqliteCommand.Cancel()
         SqliteConn.Close()
+        GC.Collect()
+        GC.WaitForPendingFinalizers()
     End Sub
 #End Region
 #Region "BASIC"
@@ -28,11 +30,11 @@ Module U_Sqlite
         SqliteCommand.CommandText = sqlCommand
         SqliteCommand.ExecuteNonQuery()
     End Sub
-    Public Function SqliteLastID(ByVal tableName As String)
+    Public Function SqliteLastID(ByVal tableName As String, ByVal fieldName As String)
         Dim dt As New DataTable
-        Dim selectQuery As String = "SELECT id FROM {0} ORDER BY id DESC LIMIT 1"
+        Dim selectQuery As String = "SELECT {0} FROM {1} ORDER BY id DESC LIMIT 1"
 
-        SqliteDbDt(dt, String.Format(selectQuery, tableName))
+        SqliteDbDt(dt, String.Format(selectQuery, fieldName, tableName))
         If dt.Rows.Count = 1 Then
             Return dt.Rows(0).Item(0)
         End If
@@ -80,7 +82,7 @@ Module U_Sqlite
 
         Dim insertCommand_1 As String = "INSERT INTO " + tableName + " ("
         Dim insertCommand_2 As String = ") VALUES ("
-        For i As Integer = 0 To columnsName.Length - 1 Step 1
+        For i As Integer = 1 To columnsName.Length - 1 Step 1
             insertCommand_1 = insertCommand_1 & columnsName(i) & ","
             Select Case (columnsType(i))
                 Case "String"
@@ -175,7 +177,7 @@ Module U_Sqlite
     Private Sub SqliteDgvBdN(ByVal dgv As DataGridView, ByVal rw As Integer, ByVal tableName As String, ByVal columnsName() As String, ByVal columnsType() As String)
         Dim insertCommand_1 As String = "INSERT INTO " + tableName + " ("
         Dim insertCommand_2 As String = ") VALUES ("
-        For i As Integer = 0 To columnsName.Length - 1 Step 1
+        For i As Integer = 1 To columnsName.Length - 1 Step 1
             insertCommand_1 = insertCommand_1 & columnsName(i) & ","
             Select Case (columnsType(i))
                 Case "String"
