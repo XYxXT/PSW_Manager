@@ -36,13 +36,13 @@
         SqliteDbDt(dt, selectQuery)
         SqliteClose()
 
-        Site_Tbx.Text = dt.Rows(0).ItemArray(1)
-        WebSite_Tbx.Text = dt.Rows(0).ItemArray(2)
-        Description_Tbx.Text = dt.Rows(0).ItemArray(3)
-        User_Tbx.Text = dt.Rows(0).ItemArray(6)
-        UserName_Tbx.Text = dt.Rows(0).ItemArray(7)
-        UserPSW_Tbx.Text = dt.Rows(0).ItemArray(8)
-        Root_Cbx.Checked = ToApp_BitToBool(dt.Rows(0).ItemArray(9))
+        Site_Tbx.Text = dt.Rows(0).Item("site")
+        WebSite_Tbx.Text = dt.Rows(0).Item("web_site")
+        Description_Tbx.Text = dt.Rows(0).Item("description")
+        User_Tbx.Text = dt.Rows(0).Item("user")
+        UserName_Tbx.Text = dt.Rows(0).Item("user_name")
+        UserPSW_Tbx.Text = dt.Rows(0).Item("user_psw")
+        Root_Cbx.Checked = dt.Rows(0).Item("root")
     End Sub
     Private Sub LoadExtInfo()
         Dim queryCommand As String = "SELECT id, id_password, description, value, '' as x FROM ext_info WHERE id_password = " & id_password
@@ -60,9 +60,9 @@
                 UserPSW_Tbx.Text, ToSql_BoolToBit(Root_Cbx.Checked), id_password))
         SqliteClose()
         SaveExtInfo()
-        If dt.Rows(0).ItemArray(7) <> UserName_Tbx.Text Or dt.Rows(0).ItemArray(8) <> UserPSW_Tbx.Text Then
-            SaveNewLastPSW(Format(dt.Rows(0).ItemArray(5), "yyyy-MM-dd HH:mm"),
-                           dt.Rows(0).ItemArray(7), dt.Rows(0).ItemArray(8))
+        If dt.Rows(0).Item("user_name") <> UserName_Tbx.Text Or dt.Rows(0).Item("user_psw") <> UserPSW_Tbx.Text Then
+            SaveNewLastPSW(Format(dt.Rows(0).Item("date_last_edit"), "yyyy-MM-dd HH:mm"),
+                           dt.Rows(0).Item("user_name"), dt.Rows(0).Item("user_psw"))
         End If
     End Sub
     Private Sub SaveNew()
