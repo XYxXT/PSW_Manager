@@ -51,6 +51,11 @@ Public Class PSWList
         PSWInfo.ShowDialog()
         LoadData()
     End Sub
+    Private Sub Psw_Dgv_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles Psw_Dgv.CellDoubleClick
+        PswSelected = Psw_Dgv.Rows(e.RowIndex).Cells(0).Value
+        PSWInfo.ShowDialog()
+        LoadData()
+    End Sub
 #End Region
 #End Region
 End Class
